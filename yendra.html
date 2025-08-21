@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Switch Case</title>
+</head>
+
+<body>
+    <form name="kalkulator">
+        <input type="number" id="nilai1" placeholder="Masukkan nilai 1"><br>
+        <input type="number" id="nilai2" placeholder="Masukkan nilai 2"><br>
+
+        <select id="operator" name="operator">
+            <option value="*">Kali</option>
+            <option value="+">Tambah</option>
+            <option value="-">Kurang</option>
+            <option value="/">Bagi</option>
+        </select>
+    </form>
+
+    <button onclick="hitung()">Hitung</button>
+
+    <p id="HasiL"></p>
+
+
+    <script>
+        function hitung() {
+            let n1 = (document.getElementById("nilai1").value)
+            let n2 = (document.getElementById("nilai2").value)
+            let operator = document.getElementById("operator").value
+
+            let Hitung = n1 + operator + n2
+            let H = eval(Hitung)
+
+            document.getElementById("HasiL").innerHTML = "Hasil : " + H;
+
+            }
+    </script>
+</body>
+</html>
